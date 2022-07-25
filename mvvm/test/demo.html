@@ -7,9 +7,13 @@
 </head>
 <body>
     <div id="app">
+        <h2>双括号内表达式和v-text指令展示</h2>
         <p>111{{msg+'...'}}222</p>
         <p v-text="msg"></p>
+        <br>
+        <h2>此处输入与上方展示数据双向绑定</h2>
         <input v-model="msg">
+        <h2>@click使按钮绑定method中的函数</h2>
         <button @click="handleClick">点我</button>
     </div>
 <script>
@@ -23,7 +27,7 @@
         },
         methods:{
             handleClick(){
-                console.log('handleClick');
+                alert('methods中的函数被调用了');
             }
         }
     })
