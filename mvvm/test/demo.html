@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script src="../dist/myVue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>111{{msg+'...'}}222</p>
+        <p v-text="msg"></p>
+        <input v-model="msg">
+        <button @click="handleClick">点我</button>
+    </div>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'hello',
+            info:{
+                text:'aaa'
+            }
+        },
+        methods:{
+            handleClick(){
+                console.log('handleClick');
+            }
+        }
+    })
+</script>
+</body>
+</html>
